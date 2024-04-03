@@ -43,7 +43,10 @@
 <!--this is for the checkbox-->
 <div class="cb-container">
 
-    <div class="checkbox"></div>
+    <div class="checkbox">
+        <input type="checkbox" id="agreement" onchange="enableNextButton()">
+        
+    </div>
     <div class="link">words with an underline</div>
 
     <!--aight this is where im going to put a checkbox when i figure out how to make one :D-->
@@ -51,7 +54,7 @@
 
 <!--this is for the elements at the bottom of the screen like the next/prev btn and the progress bar :)-->
 <div class="bottom-container">
-    <button class="next-button" onclick="location.href='path/to/next/page.html'">Next</button>
+    <button id="nextButton"class="next-button" onclick="location.href='path/to/next/page.html'">Next</button>
 </div>
 
 <div class="progress">
