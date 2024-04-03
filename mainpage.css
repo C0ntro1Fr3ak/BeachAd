@@ -24,6 +24,7 @@
     background-color: gray; 
     margin-right: 11%; 
     margin-left: 11%;
+    overflow-y: auto;
 }
 
 .small-rectangle {
