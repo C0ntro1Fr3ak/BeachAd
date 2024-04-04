@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="form-pages.css" />
+        <title>Piha Lodges</title>
+        <link rel="icon" href="photos/breakout.ico" type="image/x-icon">
+    </head>
+    <body>
+        <section>
+            <h2 class="underline">Piha Beach Booking</h2>
+            <div class="container-half card">
+                <subtitle class="card-title">Input Forms</subtitle>
+                <progress value="10" max="100"></progress>
+
+
+
+
+                <div id="form-page1" class="form-page" style="display: block;">
+                    <div>
+                        <h3>Main Page</h3>
+                    </div>
+                    <div>
+                        <h4>Fictional Nature Reserve Agreement</h4>
+                        <p>
+                            This agreement outlines the rules and regulations of our nature reserve. Please read it carefully before proceeding.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                        </p>
+                        <label>
+                            <input type="checkbox" id="agreeCheckbox">
+                            I confirm that I have read and agree to the terms of the agreement.
+                        </label>
+                    </div>
+                    <div>
+                        <button id="startButton" type="button" onclick="startIfChecked()">Start</button>
+                    </div>
+                </div>
+
+
+
+                <div id="form-page2" class="form-page" style="display: none;">
+                    <div>
+                        <h3>Personal Details</h3>
+                    </div>
+                    <div> 
+                        <label for="firstName" class="row">
+                            First Name:
+                            <input type="text" id="name-first" />
+                        </label>
+                        <label for="lastName" class="row">
+                            Last Name:
+                            <input type="text" id="name-last" />
+                        </label>
+                        <label for="email" class="row">
+                            Email:
+                            <input type="text" id="email" />
+                        </label>
+                        <label for="phone" class="row">
+                            Phone Number:
+                            <input type="number-box" id="phone-number" />
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <button class="previous" type="button" onclick="showPage(1)">
+                            Previous
+                        </button>
+                        <button class="next" type="button" onclick="showPage(3)">
+                            Next
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <div id="form-page3" class="form-page" style="display: none;">
+                    <div>
+                        <h3>Equipment</h3>
+                    </div>
+                    <div>
+                        <div>
+                            Cooking Facilities
+                            <label for="cooking-yes">
+                                <input 
+                                type="radio" 
+                                id="cooking-yes"
+                                name="cooking"
+                                value="Yes"
+                                checked
+                                />
+                                Yes
+                            </label>
+                            <label for="cooking-no">
+                                <input 
+                                type="radio"
+                                id="cooking-no"
+                                name="cooking"
+                                value="No"
+                                />
+                                No
+                            </label>
+                        </div>
+                    
+                        <div>
+                            <label for="gear-type">
+                                Equipment:
+                                <select>
+                                    <option value="Nothing">Nothing</option>
+                                    <option value="SurfBoard">SurfBoard</option>
+                                    <option value="BoogieBoard">BoogieBoard</option>
+                                    <option value="Wetsuit">Wetsuit</option>
+                                    <option value="Fins">Fins</option>
+                                    <option value="Everything">Everything</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>
+                            <label for="color-picker">
+                                Color:
+                                <input type="color" id="color-picker">
+                            </label>
+                        </div>
+                    </div>                                        
+                    <div>
+                        <button class="previous" type="button" onclick="showPage(2)">
+                            Previous
+                        </button>
+                        <button class="next" type="button" onclick="showPage(4)">
+                            Next
+                        </button>
+                    </div>
+                </div>
+
+
+
+
+                <div id="form-page4" class="form-page" style="display: none;">
+                    <div>
+                        <h3>Time and Number</h3>
+                    </div>
+                    <div>
+                        <label for="date-picker">Select Date:</label>
+                        <input type="date" id="date-picker">
+                    </div>
+                    <div>
+                        <label for="time-picker">Select Time:</label>
+                        <input type="time" id="time-picker">
+                    </div>
+                    <div>
+                        
+                        <label for="guests">Number of Guests:</label>
+                        <input type="number" id="guests" min="1">
+                    </div>
+
+                    <div>
+                        <button class="previous" type="button" onclick="showPage(3)">
+                            Previous
+                        </button>
+                        <button class="next" type="button" onclick="showPage(5)">
+                            Next
+                        </button>
+                    </div>
+                </div>
+
+
+                <div id="form-page5" class="form-page" style="display: none;">
+                    <div>
+                        <h3>Info Display</h3>
+                    </div>
+                    <div>
+                        <div class="row">
+                            Name: <span id="summary-name"></span>
+                        </div>
+                        <div class="row">
+                            Email: <span id="email1"></span>
+                        </div>
+                        <div class="row">
+                            Phone: <span id="phone"></span>
+                        </div>
+                        <div class="row">
+                            Facilities: <span id="facilities"></span>
+                        </div>
+                        <div class="row">
+                            Gear: <span id="gear-summary"></span>
+                        </div>
+                        <div class="row">
+                            Color Code: <span id="color-summary"></span>
+                        </div>
+                        <div class="row">
+                            Date: <span id="summary-date"></span>
+                        </div>
+                        <div class="row">
+                            Time: <span id="summary-time"></span>
+                        </div>
+                        <div class="row">
+                            Number of Guests: <span id="summary-guests"></span>
+                        </div>
+                        <div class="row">
+                            Agreement: <span id="agreement"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="previous" type="button" onclick="showPage(4)">
+                            Previous
+                        </button>
+                        <button class="next" type="button" onclick="submitData()">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="container-half card">
+                <subtitle class="card-title">Collected Data</subtitle>
+                <table id="collected-data">
+                    <thead>
+                        <td>Name</td>
+                        <td>Email</td>
+                        <td>Phone</td>
+                        <td>Facilities</td>
+                        <td>Agreement</td>
+                        <td>Gear</td>
+                        <td>Color</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                        <td>Number Of Guests</td>
+                        
+                    </thead>
+                </table>
+            </div>
+            <script src="formPaging.js"></script>
+        </section>
+    </body>
+</html>
