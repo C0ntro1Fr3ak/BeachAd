@@ -132,36 +132,7 @@ function updateSummary() {
 }
 
 function submitData() {
-    const dataRow = document.createElement("tr");
-    const cellName = document.createElement("td");
-    const cellPhone = document.createElement("td");
-    const cellEmail = document.createElement("td");
-    const cellFacilities = document.createElement("td");
-    const cellAgreement = document.createElement("td");
-    const cellGear = document.createElement("td");
-    const cellColor = document.createElement("td");
-
-    dataRow.appendChild(cellName);
-    dataRow.appendChild(cellEmail);
-    dataRow.appendChild(cellPhone);
-    dataRow.appendChild(cellFacilities);
-    dataRow.appendChild(cellAgreement);
-    dataRow.appendChild(cellGear);
-    dataRow.appendChild(cellColor);
-
-
-    const data = getFormData();
-
-    cellName.innerHTML = data.name;
-    cellEmail.innerHTML = data.email;
-    cellPhone.innerHTML = data.phone;
-    cellFacilities.innerHTML = data.facilities;
-    cellAgreement.innerHTML = data.agreement;
-    cellGear.innerHTML = data.gear;
-    cellColor.innerHTML = data.color;
     
-
-    formData.appendChild(dataRow);
 }
 
 function startIfChecked() {
