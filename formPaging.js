@@ -145,3 +145,21 @@ function startIfChecked() {
         alert("Please confirm that you have read and agree to the terms.");
     }
 }
+
+function restartSmallRectangle() {
+    const smallRectangle = document.getElementById("small-rectangle");
+    const contentToClone = smallRectangle.innerHTML;
+    
+    smallRectangle.innerHTML = "";
+    
+    smallRectangle.innerHTML += contentToClone;
+
+    const restartButton = document.getElementById("restartButton");
+    restartButton.style.display = "none";
+}
+const adScene4 = document.getElementById("adScene4");
+const restartButton = document.getElementById("restartButton");
+
+adScene4.addEventListener("animationend", () => {
+    restartButton.style.display = "block";
+});
